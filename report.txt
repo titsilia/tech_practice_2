@@ -1,0 +1,2042 @@
+(2750, 9)
+
+<class 'pandas.DataFrame'>
+Index: 2750 entries, 0 to 5497
+Data columns (total 9 columns):
+ #   Column                Non-Null Count  Dtype  
+---  ------                --------------  -----  
+ 0   order_status          2750 non-null   str    
+ 1   customer              2750 non-null   str    
+ 2   order_date            2750 non-null   str    
+ 3   order_quantity        2750 non-null   int64  
+ 4   sales                 2750 non-null   int64  
+ 5   discount              2750 non-null   float64
+ 6   discount_value        2750 non-null   int64  
+ 7   product_category      2750 non-null   str    
+ 8   product_sub_category  2750 non-null   str    
+dtypes: float64(1), int64(3), str(5)
+memory usage: 214.8 KB
+
+order_status            0
+customer                0
+order_date              0
+order_quantity          0
+sales                   0
+discount                0
+discount_value          0
+product_category        0
+product_sub_category    0
+
+Колонка>	среднее	медиана	отклонение
+order_quantity>	25.75;	26.00;	14.56
+sales>	3403355.78;	836230.00;	7455887.41
+discount>	0.05;	0.05;	0.03
+discount_value>	170162.02;	31294.50;	423199.34
+
+order_status
+order_status
+Order Finished     2455
+Order Returned      293
+Order Cancelled       2
+
+customer
+customer
+Maria Bertelson           17
+Bill Donatelli            16
+Christina Vanderzanden    12
+Lisa De Cherney           12
+Brad Thomas               12
+Carlos Soltero            11
+Roy Skaria                11
+Pauline Chand             11
+Darren Budd               11
+Patrick Jones             11
+Beth Thompson             10
+Philip Brown              10
+Mark Cousins              10
+Nathan Mautz              10
+Meg O'Connel              10
+Eric Barreto              10
+Giulietta Dortch          10
+Nora Price                10
+Sally Hughsby             10
+Ionia Mc Grath            10
+Amy Hunt                  10
+Lauren Leatherbury        10
+Sylvia Foulston            9
+Grant Carroll              9
+Bill Eplett                9
+Liz Mac Kendrick           9
+Russell Applegate          9
+Michael Dominguez          9
+Quincy Jones               9
+Denise Monton              9
+Lycoris Saunders           9
+Doug Bickford              8
+Erica Bern                 8
+Sally Knutson              8
+Dennis Bolton              8
+Shahid Shariari            8
+Ralph Kennedy              8
+Chuck Clark                8
+Guy Thornton               8
+Sean O'Donnell             8
+Sandra Glassco             8
+Rick Wilson                8
+Joni Blumstein             8
+Duane Huffman              8
+Edward Nazzal              8
+Michelle Ellison           8
+Karl Brown                 8
+Nicole Brennan             8
+Deanra Eno                 8
+Christy Brittain           8
+Bradley Drucker            8
+Michelle Tran              8
+Helen Wasserman            8
+Theresa Swint              8
+Arthur Prichep             8
+John Lucas                 8
+Art Foster                 8
+Ed Braxton                 8
+Thais Sissman              8
+Tanja Norvell              8
+Jonathan Doherty           8
+Charles Crestani           8
+Sonia Sunley               7
+Alex Avila                 7
+Justin Hirsh               7
+Khloe Miller               7
+Jack O'Briant              7
+Robert Waldorf             7
+Christine Sundaresam       7
+Joseph Airdo               7
+Nat Gilpin                 7
+Amy Cox                    7
+Lena Creighton             7
+Natalie Webber             7
+Tom Prescott               7
+Muhammed Yedwab            7
+Michael Oakman             7
+Deborah Brumfield          7
+Tom Stivers                7
+Harold Ryan                7
+Marc Crier                 7
+Gary Hwang                 7
+Tracy Collins              7
+Rachel Payne               7
+Peter Fuller               7
+Luke Schmidt               7
+Roy Collins                7
+Jim Epp                    7
+Tamara Willingham          7
+Adam Shillingsburg         7
+Brad Eason                 6
+Ralph Knight               6
+Susan Vittorini            6
+Harold Engle               6
+Guy Armstrong              6
+Greg Guthrie               6
+Joy Smith                  6
+Logan Haushalter           6
+Neil Knudson               6
+Bobby Odegard              6
+Duane Benoit               6
+Harold Pawlan              6
+George Ashbrook            6
+Dave Hallsten              6
+Nat Carroll                6
+Cari Mac Intyre            6
+Noel Staavos               6
+Liz Willingham             6
+Vivian Mathis              6
+Barry Gonzalez             6
+Corey Lock                 6
+Anne Pryor                 6
+Katherine Nockton          6
+Sandra Flanagan            6
+Alejandro Grove            6
+Ken Brennan                6
+Max Jones                  6
+John Lee                   6
+Valerie Takahito           6
+Mick Crebagga              6
+William Brown              6
+Pauline Webber             6
+Aleksandra Gannaway        6
+Carl Weiss                 6
+Maxwell Schwartz           6
+Cindy Chapman              6
+Jeremy Pistek              6
+Jill Matthias              6
+Fred Harton                6
+Tim Brockman               6
+Ken Dana                   6
+Muhammed Mac Intyre        5
+Claudia Miner              5
+Nicole Hansen              5
+Jeremy Lonsdale            5
+Christopher Schild         5
+Jack Lebron                5
+Brian Moss                 5
+Rob Haberlin               5
+Seth Vernon                5
+Liz Price                  5
+Kristina Nunn              5
+Tony Chapman               5
+Art Ferguson               5
+Ivan Liston                5
+Mike Kennedy               5
+Aaron Smayling             5
+Julia Dunbar               5
+Doug O'Connell             5
+Adam Bellavance            5
+Candace Mc Mahon           5
+Eugene Hildebrand          5
+Edward Becker              5
+Jim Mitchum                5
+Brian Stugart              5
+Cynthia Arntzen            5
+Sean Miller                5
+Maria Zettner              5
+Chuck Sachs                5
+Harold Dahlen              5
+Fred Mc Math               5
+Tracy Poddar               5
+Maureen Gastineau          5
+Dan Campbell               5
+Karen Carlisle             5
+Tony Molinari              5
+Carlos Meador              5
+Dave Poirier               5
+Michael Kennedy            5
+Bobby Elias                5
+Joni Wasserman             5
+Benjamin Venier            5
+Debra Catini               5
+David Kendrick             5
+Sanjit Jacobs              5
+Darrin Sayre               5
+Evan Henry                 5
+Pamela Stobb               5
+Stewart Visinsky           5
+Mathew Reese               5
+Carol Triggs               5
+Lindsay Castell            5
+Steve Nguyen               5
+Odella Nelson              5
+Jenna Caffey               5
+Troy Blackwell             5
+Clytie Kelty               5
+Penelope Sewall            5
+Steven Ward                5
+Meg Tillman                5
+Patrick Ryan               5
+Ashley Jarboe              5
+Rick Hansen                5
+Jennifer Jackson           5
+Dennis Pardue              5
+Kelly Andreada             5
+Toby Swindell              5
+Adam Hart                  5
+Bryan Spruell              5
+Thomas Thornton            5
+Dave Kipp                  5
+Christopher Martinez       5
+Anthony Rawles             5
+Shaun Chance               5
+Lisa Hazard                5
+Alex Russell               5
+Becky Pak                  5
+Catherine Glotzbach        5
+Monica Federle             4
+Carlos Daly                4
+Julia West                 4
+Dorothy Wardle             4
+Anthony Johnson            4
+Brendan Dodson             4
+Henry Goldwyn              4
+Charlotte Melton           4
+Ralph Arnett               4
+Roy French                 4
+Evan Minnotte              4
+Jim Sink                   4
+Justin Knight              4
+Kimberly Carter            4
+Gene Hale                  4
+Barbara Fisher             4
+Daniel Lacy                4
+Mike Vittorini             4
+Lela Donovan               4
+Rob Dowd                   4
+Thomas Brumley             4
+Vicky Freymann             4
+Giulietta Weimer           4
+John Murray                4
+Lena Hernandez             4
+Sean Wendt                 4
+John Castell               4
+Helen Andreada             4
+Ken Lonsdale               4
+Hallie Redmond             4
+Ivan Gibson                4
+Rob Beeghly                4
+Jennifer Halladay          4
+Ritsa Hightower            4
+Eva Jacobs                 4
+Jas O'Carroll              4
+Erin Creighton             4
+Eileen Kiefer              4
+Nancy Lomonaco             4
+Erin Ashbrook              4
+Melanie Page               4
+Alan Hwang                 4
+Darren Powers              4
+Naresj Patel               4
+Andy Reiter                4
+Olvera Toch                4
+Lena Radford               4
+Raymond Fair               4
+Bobby Trafton              4
+Nora Paige                 4
+Eleni Mc Crary             4
+Astrea Jones               4
+Michael Paige              4
+Jay Fine                   4
+Erica Hernandez            4
+Elizabeth Moffitt          4
+Janet Martin               4
+Troy Staebel               4
+Sara Luxemburg             4
+Julia Barnett              4
+Matt Collister             4
+Scott Cohen                4
+Cynthia Delaney            4
+Paul Knutson               4
+Ellis Ballard              4
+Caroline Jumper            4
+Jasper Cacioppo            4
+John Stevenson             4
+Ben Wallace                4
+Laurel Elliston            4
+Jennifer Ferguson          4
+Robert Marley              4
+Vivek Grady                4
+Lindsay Shagiari           4
+Stephanie Ulpright         4
+Benjamin Patterson         4
+Karen Seio                 4
+Emily Phan                 4
+Joe Elijah                 4
+Keith Dawkins              4
+Sean Braxton               4
+Maurice Satty              4
+Evan Bailliet              4
+Valerie Dominguez          4
+Craig Molinari             4
+Rick Bensley               4
+John Dryer                 4
+Mitch Willingham           4
+Michelle Moray             4
+Sung Shariari              4
+Nick Crebassa              4
+Justin Ellison             4
+Mary Beth Skach            4
+Paul Stevenson             4
+Tracy Blumstein            4
+Michael Grace              4
+Randy Ferguson             4
+Arianne Irving             4
+Andy Gerbode               4
+Cindy Stewart              4
+Dianna Vittorini           4
+Dean Katz                  4
+Cyra Reiten                4
+Juliana Krohn              4
+Eugene Moren               4
+Carol Darley               4
+Sung Pak                   4
+Roger Demir                4
+Matthew Grinstein          4
+Sonia Cooley               4
+Tom Boeckenhauer           4
+Carl Ludwig                3
+Don Miller                 3
+Frank Price                3
+Michelle Lonsdale          3
+Joy Bell                   3
+Andrew Gjertsen            3
+Beth Paige                 3
+Don Jones                  3
+Alan Barnes                3
+Fred Wasserman             3
+Mike Pelletier             3
+Heather Kirkland           3
+Cindy Schnelling           3
+Cari Schnelling            3
+Giulietta Baptist          3
+Sanjit Chand               3
+Michelle Arnett            3
+Luke Weiss                 3
+Emily Grady                3
+Anna Andreadi              3
+Jim Karlsson               3
+Anthony O'Donnell          3
+Patrick O'Brill            3
+Matt Abelman               3
+Sarah Jordon               3
+Steve Carroll              3
+Sally Matthias             3
+Brad Norvell               3
+Michael Granlund           3
+Roland Black               3
+Bart Watters               3
+Nathan Cano                3
+Ken Heidel                 3
+Theone Pippenger           3
+Parhena Norris             3
+Dana Kaydos                3
+Bruce Stewart              3
+Liz Thompson               3
+Julie Prescott             3
+Craig Carroll              3
+Skye Norling               3
+Pete Armstrong             3
+Daniel Raglin              3
+Corinna Mitchell           3
+Paul Prost                 3
+Tamara Dahlen              3
+Gary Zandusky              3
+Ann Blume                  3
+Gary Hansen                3
+James Lanier               3
+Christine Phan             3
+Theresa Coyne              3
+Mike Caudle                3
+Jonathan Howell            3
+Joni Sundaresam            3
+David Philippe             3
+Anemone Ratner             3
+Thomas Boland              3
+Sean Christensen           3
+Scot Coram                 3
+Patricia Hirasaki          3
+Phillip Breyer             3
+Nathan Gelder              3
+Victoria Wilson            3
+Barry Franz                3
+Rick Duston                3
+Frank Atkinson             3
+Alex Grayson               3
+Elpida Rittenbach          3
+David Wiener               3
+Peter Mc Vee               3
+Stefania Perrino           3
+George Zrebassa            3
+Alyssa Tate                3
+Damala Kotsonis            3
+Berenike Kampe             3
+Muhammed Lee               3
+Karen Ferguson             3
+Bradley Talbott            3
+Denise Leinenbach          3
+Becky Martin               3
+Katrina Willman            3
+Katherine Murray           3
+Bradley Nguyen             3
+Vivek Sundaresam           3
+Gary Mc Garr               3
+Grant Thornton             3
+Jennifer Patt              3
+Maribeth Dona              3
+Pierre Wener               3
+Brendan Murry              3
+Phillip Flathmann          3
+Dorris Love                3
+Dennis Kane                3
+Max Engle                  3
+Sarah Brown                3
+Tony Sayre                 3
+Dionis Lloyd               3
+Arthur Gainer              3
+Jane Waco                  3
+Bill Overfelt              3
+Kean Nguyen                3
+Mick Hernandez             3
+Denny Blanton              3
+Matt Connell               3
+Laura Armstrong            3
+Jim Kriz                   3
+Harry Marie                3
+Kristen Hastings           3
+Alejandro Savely           3
+Kean Thornton              3
+Philip Fox                 3
+Erin Mull                  3
+Steve Chapman              3
+Corey Catlett              3
+Linda Southworth           3
+Ross Baird                 3
+Tracy Zic                  3
+Irene Maddox               3
+Eric Hoffmann              3
+Sue Ann Reed               3
+Katherine Ducich           3
+Toby Knight                3
+Nora Pelletier             3
+Mike Gockenbach            3
+Jamie Frazer               3
+Jill Fjeld                 3
+Sam Craven                 3
+Randy Bradley              3
+Toby Grace                 3
+Maya Herman                3
+Sung Chung                 3
+Maribeth Yedwab            3
+Richard Eichhorn           3
+Suzanne Mc Nair            3
+Neil French                3
+Joel Eaton                 3
+Liz Carlisle               3
+Larry Blacks               3
+Brian Dahlen               3
+Lynn Smith                 3
+Katherine Hughes           3
+Richard Bierner            3
+Ricardo Block              3
+Barry Pond                 3
+Victoria Pisteka           3
+Tim Taslimi                3
+Thea Hendricks             3
+Cathy Armstrong            3
+Art Miller                 3
+Greg Matthias              3
+Barry Blumstein            3
+Resi Polking               3
+Lisa Ryan                  3
+Sibella Parks              3
+Alyssa Crouse              3
+Annie Thurman              3
+Carl Jackson               2
+Dorothy Badders            2
+Neola Schneider            2
+Jack Garza                 2
+Eugene Barchas             2
+Jim Radford                2
+Clay Rozendal              2
+Adrian Hane                2
+Hunter Glantz              2
+Thomas Seio                2
+Chad Cunningham            2
+Rick Reed                  2
+Becky Castell              2
+Bryan Mills                2
+Charles Mc Crossin         2
+Edward Hooks               2
+Jamie Kunitz               2
+Allen Rosenblatt           2
+Jennifer Braxton           2
+Hilary Holden              2
+Paul Gonzalez              2
+Filia Mc Adams             2
+Julie Creighton            2
+Matt Collins               2
+Lena Cacioppo              2
+Marina Lichtenstein        2
+Christina De Moss          2
+Sarah Foster               2
+Peter Buhler               2
+Ricardo Emerson            2
+Trudy Schmidt              2
+Sarah Bern                 2
+Daniel Byrd                2
+Heather Jas                2
+Shahid Hopkins             2
+Greg Maxwell               2
+Marc Harrigan              2
+Paul Mac Intyre            2
+Chad Sievert               2
+Charles Sheldon            2
+Brian Derr                 2
+Darren Koutras             2
+Mary O'Rourke              2
+Hunter Lopez               2
+Shaun Weien                2
+Brian Thompson             2
+Cari Sayre                 2
+Rose O'Brian               2
+Michael Nguyen             2
+Henry Mac Allister         2
+Tamara Chand               2
+Anthony Witt               2
+Ted Trevino                2
+Ed Ludwig                  2
+Erin Smith                 2
+Frank Carlisle             2
+Kelly Lampkin              2
+Dan Lawera                 2
+Arthur Wiediger            2
+Frank Hawley               2
+David Smith                2
+Patrick Bzostek            2
+Eudokia Martin             2
+Todd Boyes                 2
+Patrick O'Donnell          2
+Keith Herrera              2
+Cathy Hwang                2
+Eric Murdock               2
+Dean Percer                2
+Chris Cortes               2
+Mark Haberlin              2
+Emily Burns                2
+David Flashing             2
+Craig Yedwab               2
+Ben Peterman               2
+Alan Shonely               2
+Robert Barroso             2
+Dianna Wilson              2
+Carol Adams                2
+Gene Mc Clure              2
+Michelle Huthwaite         2
+Speros Goranitis           2
+Michael Stewart            2
+Sheri Gordon               2
+Alan Haines                2
+Stuart Van                 2
+Michael Chen               2
+Clay Ludtke                2
+Fred Chung                 2
+Xylona Price               2
+Herbert Flentye            2
+Janet Molinari             2
+Karen Daniels              2
+Pamela Coakley             2
+Cathy Prescott             2
+Sam Zeldin                 2
+Chris Selesnick            2
+Greg Hansen                2
+Maureen Fritzler           2
+Erica Hackney              2
+Jessica Myrick             2
+Steven Roelle              2
+Denny Joy                  2
+Aaron Hawkins              2
+Grant Donatelli            2
+Lori Olson                 2
+Nona Balk                  2
+Stefanie Holloman          2
+Lindsay Williams           2
+Ken Black                  2
+Scot Wooten                2
+Michael Moore              2
+Ryan Crowe                 2
+Jill Stevenson             2
+Russell D'Ascenzo          2
+Victor Price               2
+Nick Radford               2
+Tom Zandusky               2
+Steven Cartwright          2
+Sanjit Engle               2
+Thea Hudgings              2
+Neoma Murray               2
+Nick Zandusky              2
+Max Ludwig                 2
+Darrin Van Huff            2
+Mark Van Huff              2
+Susan Pistek               2
+Liz Pelletier              2
+Janet Lee                  2
+Kelly Collister            2
+Craig Leslie               2
+Laurel Beltran             2
+Saphhira Shifley           2
+Christina Anderson         2
+Robert Dilbeck             2
+Trudy Brown                2
+Toby Carlisle              2
+James Galang               2
+Pauline Johnson            2
+Georgia Rosenberg          2
+Bruce Degenhardt           2
+Rob Williams               2
+Benjamin Farhat            2
+Rob Lucas                  2
+Roland Fjeld               2
+Anne Mc Farland            2
+Yana Sorensen              2
+David Bremer               2
+Tom Ashbrook               2
+Barry Weirich              2
+Chris Mc Afee              2
+Paul Van Hugh              2
+Andrew Allen               2
+Duane Noonan               2
+Tamara Manning             2
+Laurel Workman             2
+Roland Murray              2
+Katharine Harms            2
+Mitch Gastineau            2
+Brooke Gillingham          2
+Alejandro Ballentine       2
+Adrian Barton              2
+Frank Olsen                2
+Christine Kargatis         2
+Joel Jenkins               2
+Aaron Bergman              1
+Bryan Davis                1
+Delfina Latchford          1
+Ann Chong                  1
+Annie Cyprus               1
+N UL L                     1
+Barry French               1
+Helen Abelman              1
+Chuck Magee                1
+Kelly Williams             1
+Jocasta Rupert             1
+Stewart Carmichael         1
+Angele Hood                1
+Scott Williamson           1
+Neil Ducich                1
+Katrina Bavinger           1
+Anna Gayman                1
+Ruben Ausman               1
+Anna Haberlin              1
+Larry Hughes               1
+Gary Mitchum               1
+Matt Hagelstein            1
+Bill Stewart               1
+Noah Childs                1
+Andy Yotov                 1
+Aimee Bixby                1
+Magdelene Morse            1
+Dean Braden                1
+Jesus Ocampo               1
+Allen Golden               1
+George Bell                1
+Jeremy Ellison             1
+Natalie Fritzler           1
+Shahid Collister           1
+Bill Tyler                 1
+Luke Foster                1
+Valerie Mitchum            1
+Bart Pistole               1
+Chad Mc Guire              1
+Natalie De Cherney         1
+Ross De Vincentis          1
+Doug Jacobs                1
+Dianna Arnett              1
+Julie Kriz                 1
+Ted Butterfield            1
+Jason Klamczynski          1
+Mitch Webber               1
+Justin Mac Kendrick        1
+Brenda Bowman              1
+Jeremy Farry               1
+Shirley Daniels            1
+John Grady                 1
+Ben Ferrer                 1
+Ryan Akin                  1
+Don Weiss                  1
+Kalyca Meade               1
+Jason Fortune              1
+Patrick Gardner            1
+Justin Deggeller           1
+Dave Brooks                1
+Maureen Grace              1
+Emily Ducich               1
+Matthew Clasen             1
+Maribeth Schnelling        1
+Henia Zydlo                1
+Joseph Holt                1
+Kean Takahito              1
+Susan Gilcrest             1
+Craig Rider                1
+Mark Hamilton              1
+John Huston                1
+Anthony Garverick          1
+Craig Carreira             1
+Frank Gastineau            1
+Tiffany House              1
+Beth Fritzler              1
+Brosina Hoffman            1
+Phillina Ober              1
+Christine Abelman          1
+Allen Armold               1
+Dario Medina               1
+Trudy Bell                 1
+Paul Lucas                 1
+Cynthia Voltz              1
+Ed Jacobs                  1
+Corey Roper                1
+Alan Schoenberger          1
+Shirley Jackson            1
+Mick Brown                 1
+Maris La Ware              1
+Bill Shonely               1
+Rick Huthwaite             1
+Mark Packer                1
+Denny Ordway               1
+Sharelle Roach             1
+Roger Barcio               1
+Chloris Kastensmidt        1
+Sample Company A           1
+Cassandra Brandow          1
+Claire Good                1
+Frank Merwin               1
+Alice Mc Carthy            1
+Bruce Money                1
+Dorothy Dickinson          1
+Mary Zewe                  1
+
+order_date
+order_date
+2010-04-20    7
+2010-09-19    6
+2010-08-24    6
+2012-03-23    6
+2010-04-15    6
+2010-07-03    6
+2010-08-26    6
+2010-02-27    6
+2010-06-09    6
+2009-03-27    6
+2010-09-26    6
+2009-01-21    6
+2010-03-07    6
+2012-03-28    6
+2012-10-18    6
+2011-05-20    6
+2009-04-09    6
+2009-04-06    6
+2012-08-12    6
+2010-02-26    5
+2010-11-23    5
+2012-06-08    5
+2012-08-04    5
+2009-10-09    5
+2012-07-21    5
+2011-04-11    5
+2010-12-05    5
+2010-07-29    5
+2012-03-02    5
+2009-09-01    5
+2012-08-28    5
+2012-10-06    5
+2011-01-10    5
+2010-11-22    5
+2011-11-19    5
+2009-01-05    5
+2010-09-24    5
+2010-05-20    5
+2011-02-13    5
+2012-12-03    5
+2012-10-30    5
+2012-08-09    5
+2012-05-17    5
+2010-11-04    5
+2010-08-21    5
+2012-03-04    5
+2010-08-04    5
+2010-12-21    5
+2012-02-17    5
+2011-02-24    5
+2010-12-12    5
+2012-09-15    5
+2011-07-27    5
+2009-11-20    5
+2010-09-17    5
+2011-10-02    5
+2009-06-01    5
+2012-07-10    5
+2009-09-06    5
+2009-12-06    5
+2012-02-19    5
+2009-08-14    5
+2011-04-20    5
+2010-03-09    5
+2012-05-07    5
+2010-11-29    5
+2010-11-09    5
+2009-06-30    5
+2009-07-17    5
+2012-04-28    5
+2011-05-12    5
+2011-03-24    4
+2011-12-31    4
+2011-10-09    4
+2011-03-17    4
+2010-09-21    4
+2010-08-17    4
+2009-06-22    4
+2009-08-05    4
+2011-10-22    4
+2009-08-10    4
+2010-07-31    4
+2012-10-29    4
+2009-09-04    4
+2012-07-09    4
+2009-10-08    4
+2009-05-01    4
+2009-11-29    4
+2009-03-13    4
+2011-09-22    4
+2010-05-07    4
+2011-01-04    4
+2010-12-28    4
+2009-12-19    4
+2010-04-11    4
+2010-08-03    4
+2010-12-30    4
+2012-04-14    4
+2010-12-03    4
+2012-05-20    4
+2009-11-03    4
+2010-01-10    4
+2012-04-27    4
+2010-03-02    4
+2009-07-06    4
+2010-06-25    4
+2010-05-28    4
+2009-07-24    4
+2010-07-20    4
+2011-01-09    4
+2011-02-26    4
+2012-09-13    4
+2009-05-20    4
+2012-12-25    4
+2010-10-29    4
+2011-09-04    4
+2012-04-13    4
+2009-04-10    4
+2011-11-18    4
+2011-09-15    4
+2009-06-25    4
+2010-10-12    4
+2009-01-15    4
+2011-08-03    4
+2011-02-01    4
+2012-02-06    4
+2011-09-08    4
+2011-07-03    4
+2010-08-13    4
+2012-01-19    4
+2009-12-14    4
+2011-07-13    4
+2012-05-31    4
+2012-08-07    4
+2009-06-29    4
+2012-05-03    4
+2009-07-26    4
+2011-02-05    4
+2009-12-05    4
+2011-08-20    4
+2009-01-12    4
+2010-02-20    4
+2009-02-26    4
+2012-07-12    4
+2009-01-17    4
+2010-10-26    4
+2011-12-21    4
+2010-07-17    4
+2009-02-10    4
+2010-05-14    4
+2011-05-03    4
+2009-09-19    4
+2010-01-03    4
+2012-02-01    4
+2012-05-13    4
+2011-07-15    4
+2010-07-25    4
+2011-11-10    4
+2010-05-10    4
+2012-04-09    4
+2011-05-19    4
+2012-06-19    4
+2010-10-16    4
+2009-06-15    4
+2009-10-04    4
+2010-01-11    4
+2010-06-21    4
+2009-01-16    4
+2012-01-12    4
+2012-03-30    4
+2009-04-19    4
+2010-11-14    4
+2012-10-07    4
+2009-04-21    4
+2010-01-29    4
+2012-09-30    4
+2009-05-07    4
+2009-03-21    4
+2011-08-17    4
+2009-06-12    4
+2010-09-04    4
+2010-07-26    4
+2011-07-22    4
+2012-08-01    4
+2010-02-04    4
+2012-03-24    4
+2010-10-13    3
+2010-11-08    3
+2011-01-01    3
+2010-09-23    3
+2012-10-08    3
+2012-05-02    3
+2010-03-08    3
+2011-05-28    3
+2009-01-30    3
+2010-04-29    3
+2012-06-12    3
+2010-06-04    3
+2011-08-28    3
+2010-04-12    3
+2011-07-04    3
+2009-09-11    3
+2012-01-08    3
+2009-09-16    3
+2009-01-11    3
+2010-08-15    3
+2010-04-01    3
+2012-06-28    3
+2010-01-16    3
+2011-09-02    3
+2012-02-07    3
+2012-04-15    3
+2009-07-02    3
+2012-05-11    3
+2012-09-01    3
+2012-05-21    3
+2010-08-27    3
+2009-02-27    3
+2012-02-23    3
+2009-10-15    3
+2010-03-12    3
+2011-07-21    3
+2010-02-06    3
+2009-04-27    3
+2012-04-07    3
+2012-06-26    3
+2010-11-25    3
+2009-12-02    3
+2012-06-29    3
+2011-03-16    3
+2009-02-02    3
+2010-07-24    3
+2011-03-07    3
+2012-03-15    3
+2010-12-22    3
+2011-04-29    3
+2009-01-24    3
+2010-11-17    3
+2012-10-31    3
+2011-12-18    3
+2009-02-04    3
+2009-02-15    3
+2009-01-18    3
+2009-09-05    3
+2009-11-10    3
+2009-04-18    3
+2010-02-01    3
+2010-07-09    3
+2011-06-23    3
+2009-02-05    3
+2011-09-24    3
+2011-09-28    3
+2012-09-20    3
+2010-03-19    3
+2012-03-20    3
+2010-07-19    3
+2010-06-03    3
+2012-02-27    3
+2009-06-17    3
+2012-07-16    3
+2012-07-03    3
+2011-03-15    3
+2010-10-06    3
+2010-01-18    3
+2009-12-12    3
+2012-12-09    3
+2011-04-13    3
+2012-01-16    3
+2012-10-02    3
+2012-11-10    3
+2012-05-10    3
+2010-08-23    3
+2011-06-16    3
+2010-09-20    3
+2011-04-08    3
+2012-08-30    3
+2012-04-26    3
+2009-08-28    3
+2012-09-05    3
+2010-08-22    3
+2012-08-19    3
+2011-09-11    3
+2011-02-15    3
+2009-09-23    3
+2010-02-17    3
+2009-01-10    3
+2011-06-19    3
+2010-02-22    3
+2012-10-28    3
+2012-07-17    3
+2012-12-27    3
+2010-03-03    3
+2010-11-01    3
+2011-05-07    3
+2010-08-09    3
+2010-01-02    3
+2012-10-04    3
+2012-04-12    3
+2012-03-27    3
+2011-05-01    3
+2010-09-29    3
+2012-01-24    3
+2009-07-14    3
+2011-12-09    3
+2012-08-05    3
+2010-07-23    3
+2011-12-20    3
+2009-06-11    3
+2011-03-30    3
+2012-06-24    3
+2010-01-07    3
+2011-04-06    3
+2009-01-07    3
+2012-04-29    3
+2010-03-14    3
+2012-05-12    3
+2010-10-19    3
+2009-06-13    3
+2010-01-22    3
+2009-11-22    3
+2011-07-01    3
+2009-03-01    3
+2009-10-13    3
+2012-06-11    3
+2012-06-15    3
+2012-04-03    3
+2009-05-21    3
+2009-02-12    3
+2011-09-10    3
+2011-08-09    3
+2011-02-07    3
+2012-12-30    3
+2012-09-19    3
+2010-10-18    3
+2011-10-18    3
+2010-03-24    3
+2010-11-30    3
+2009-09-12    3
+2012-09-04    3
+2012-02-02    3
+2010-11-19    3
+2009-03-28    3
+2009-07-21    3
+2012-11-08    3
+2009-08-18    3
+2012-12-10    3
+2012-01-09    3
+2009-10-28    3
+2010-01-20    3
+2010-02-25    3
+2009-12-28    3
+2010-05-17    3
+2009-04-22    3
+2010-06-30    3
+2010-01-08    3
+2009-09-30    3
+2009-04-08    3
+2012-06-27    3
+2010-01-15    3
+2011-02-02    3
+2011-08-21    3
+2009-05-11    3
+2011-10-26    3
+2009-08-31    3
+2011-05-08    3
+2012-07-02    3
+2009-11-04    3
+2011-12-22    3
+2012-02-15    3
+2011-03-03    3
+2012-09-25    3
+2010-01-14    3
+2011-06-03    3
+2011-04-28    3
+2010-07-18    3
+2011-10-28    3
+2011-06-06    3
+2010-06-16    3
+2010-06-19    3
+2009-10-01    3
+2010-01-25    3
+2011-01-29    3
+2010-12-13    3
+2010-12-17    3
+2011-10-20    3
+2010-03-01    3
+2012-01-30    3
+2011-08-11    3
+2010-12-20    3
+2011-09-19    3
+2010-12-26    3
+2010-07-28    3
+2009-03-14    3
+2012-12-29    3
+2011-12-02    3
+2011-02-10    3
+2009-03-30    3
+2009-05-25    3
+2011-12-11    3
+2010-01-23    3
+2009-08-21    3
+2009-09-15    3
+2011-11-02    3
+2009-05-22    3
+2010-05-24    3
+2009-10-11    3
+2012-10-15    3
+2012-05-22    3
+2011-08-14    3
+2009-05-15    3
+2011-05-31    3
+2010-01-12    3
+2011-11-05    3
+2012-12-11    3
+2011-07-25    3
+2012-09-12    3
+2011-06-30    3
+2010-04-19    3
+2011-11-21    3
+2012-09-18    3
+2011-11-03    3
+2009-06-03    3
+2012-11-24    3
+2009-02-11    3
+2011-07-02    3
+2010-10-02    3
+2010-03-21    3
+2011-04-23    3
+2012-12-28    3
+2010-04-25    3
+2010-01-31    3
+2010-10-03    3
+2011-09-03    3
+2012-02-11    3
+2012-02-18    3
+2010-04-07    3
+2011-06-17    2
+2012-02-14    2
+2011-07-19    2
+2010-11-07    2
+2011-11-12    2
+2011-11-16    2
+2011-08-07    2
+2011-05-17    2
+2011-10-10    2
+2011-05-27    2
+2009-08-27    2
+2012-06-06    2
+2012-05-16    2
+2009-07-22    2
+2009-07-27    2
+2011-02-08    2
+2009-01-06    2
+2011-08-10    2
+2010-08-20    2
+2010-06-27    2
+2009-03-11    2
+2009-09-25    2
+2011-11-25    2
+2012-04-25    2
+2010-10-23    2
+2011-06-09    2
+2011-07-23    2
+2010-10-20    2
+2010-08-30    2
+2011-07-31    2
+2010-10-07    2
+2010-06-08    2
+2010-06-07    2
+2009-07-07    2
+2010-12-31    2
+2010-02-02    2
+2011-08-25    2
+2011-01-17    2
+2009-03-06    2
+2010-12-24    2
+2010-03-05    2
+2009-08-02    2
+2011-01-28    2
+2012-04-22    2
+2010-09-25    2
+2012-11-19    2
+2009-02-01    2
+2010-08-10    2
+2012-05-26    2
+2012-09-10    2
+2012-03-06    2
+2009-08-04    2
+2009-10-02    2
+2012-01-20    2
+2009-07-15    2
+2010-09-11    2
+2009-12-23    2
+2011-05-22    2
+2011-01-31    2
+2010-06-14    2
+2012-01-06    2
+2009-12-10    2
+2010-02-12    2
+2009-05-12    2
+2009-03-22    2
+2011-11-09    2
+2011-12-14    2
+2010-10-01    2
+2009-06-28    2
+2009-01-26    2
+2009-08-06    2
+2012-06-05    2
+2009-04-29    2
+2010-06-15    2
+2009-09-20    2
+2011-04-09    2
+2010-01-05    2
+2011-12-30    2
+2010-06-28    2
+2012-03-13    2
+2012-01-22    2
+2012-04-05    2
+2010-03-13    2
+2011-09-06    2
+2012-05-05    2
+2010-06-23    2
+2009-08-15    2
+2012-12-04    2
+2011-03-10    2
+2009-02-22    2
+2012-08-14    2
+2009-06-21    2
+2012-08-10    2
+2010-07-21    2
+2012-07-28    2
+2012-10-25    2
+2009-08-01    2
+2009-08-23    2
+2009-10-18    2
+2011-07-24    2
+2009-01-22    2
+2010-05-02    2
+2011-04-05    2
+2010-04-10    2
+2009-03-18    2
+2012-03-01    2
+2011-03-21    2
+2010-05-11    2
+2010-12-29    2
+2011-04-30    2
+2011-11-30    2
+2009-02-13    2
+2010-02-19    2
+2012-07-19    2
+2011-03-19    2
+2009-01-31    2
+2010-10-25    2
+2011-04-16    2
+2011-09-07    2
+2009-02-25    2
+2012-07-20    2
+2011-10-12    2
+2012-02-26    2
+2009-02-23    2
+2010-11-21    2
+2010-02-07    2
+2012-06-02    2
+2010-05-30    2
+2010-04-03    2
+2009-10-07    2
+2012-03-12    2
+2011-07-18    2
+2011-01-25    2
+2011-01-06    2
+2011-02-04    2
+2012-10-17    2
+2010-05-08    2
+2009-09-28    2
+2009-05-26    2
+2010-12-04    2
+2010-08-05    2
+2009-06-19    2
+2010-06-06    2
+2009-02-06    2
+2009-06-14    2
+2010-06-20    2
+2012-07-11    2
+2011-04-25    2
+2012-10-12    2
+2010-10-09    2
+2012-10-19    2
+2011-04-22    2
+2009-06-10    2
+2011-10-05    2
+2012-09-28    2
+2011-04-02    2
+2009-11-21    2
+2010-10-21    2
+2012-03-11    2
+2010-09-28    2
+2009-09-29    2
+2010-03-30    2
+2010-01-28    2
+2012-01-05    2
+2009-04-23    2
+2009-11-30    2
+2011-07-06    2
+2011-01-19    2
+2009-11-02    2
+2011-10-24    2
+2011-10-07    2
+2012-05-06    2
+2011-02-14    2
+2012-11-09    2
+2012-11-18    2
+2010-09-30    2
+2010-11-24    2
+2010-09-14    2
+2012-04-06    2
+2010-03-22    2
+2010-12-27    2
+2009-03-24    2
+2011-12-10    2
+2010-08-14    2
+2011-03-04    2
+2010-05-25    2
+2009-04-05    2
+2010-07-14    2
+2012-01-31    2
+2011-10-03    2
+2009-01-20    2
+2011-03-13    2
+2012-04-01    2
+2009-11-25    2
+2012-09-03    2
+2012-12-21    2
+2009-07-04    2
+2012-07-29    2
+2012-04-24    2
+2012-07-15    2
+2009-04-16    2
+2012-07-25    2
+2010-01-26    2
+2009-11-08    2
+2009-03-20    2
+2009-03-17    2
+2009-04-01    2
+2011-06-01    2
+2011-07-16    2
+2012-10-09    2
+2012-09-14    2
+2012-02-09    2
+2012-09-22    2
+2012-04-04    2
+2011-06-28    2
+2011-12-08    2
+2009-01-19    2
+2010-09-12    2
+2010-10-31    2
+2010-09-10    2
+2009-05-19    2
+2011-11-26    2
+2012-12-12    2
+2009-07-28    2
+2009-08-22    2
+2012-01-27    2
+2011-10-25    2
+2011-11-22    2
+2009-05-28    2
+2011-02-06    2
+2011-12-19    2
+2011-05-21    2
+2011-04-21    2
+2009-01-13    2
+2011-08-15    2
+2009-05-23    2
+2010-10-24    2
+2010-02-08    2
+2012-10-27    2
+2011-06-12    2
+2011-08-24    2
+2009-04-13    2
+2010-05-13    2
+2011-05-04    2
+2011-08-26    2
+2012-03-03    2
+2012-09-06    2
+2012-03-09    2
+2010-04-16    2
+2011-10-01    2
+2010-07-27    2
+2009-10-20    2
+2010-07-16    2
+2011-08-13    2
+2011-12-16    2
+2012-08-21    2
+2009-04-15    2
+2012-10-16    2
+2009-12-26    2
+2010-01-24    2
+2011-11-13    2
+2012-07-18    2
+2011-02-12    2
+2012-12-13    2
+2011-06-15    2
+2012-07-14    2
+2011-11-01    2
+2011-10-04    2
+2012-09-17    2
+2009-01-08    2
+2010-10-08    2
+2009-11-17    2
+2012-07-31    2
+2011-09-30    2
+2010-04-28    2
+2011-04-03    2
+2009-06-23    2
+2009-05-02    2
+2012-02-04    2
+2012-06-10    2
+2010-07-07    2
+2012-08-22    2
+2009-03-02    2
+2011-10-31    2
+2010-12-01    2
+2010-05-26    2
+2012-07-27    2
+2009-06-04    2
+2012-06-22    2
+2012-10-24    2
+2010-09-09    2
+2012-08-29    2
+2010-05-21    2
+2012-04-17    2
+2012-06-04    2
+2011-12-05    2
+2011-10-21    2
+2012-11-28    2
+2011-10-16    2
+2009-05-17    2
+2010-05-29    2
+2012-06-20    2
+2010-05-05    2
+2011-06-24    2
+2010-09-27    2
+2011-01-21    2
+2012-09-23    2
+2011-10-30    2
+2012-11-01    2
+2010-02-11    2
+2010-09-18    2
+2011-04-15    2
+2012-05-09    2
+2012-09-29    2
+2011-07-07    2
+2009-10-19    2
+2012-01-04    2
+2012-09-09    2
+2009-03-10    2
+2009-07-09    2
+2011-06-18    2
+2011-11-17    2
+2012-11-25    2
+2012-03-07    2
+2011-04-01    2
+2010-09-03    2
+2012-12-02    2
+2010-12-06    2
+2012-01-13    2
+2012-01-03    2
+2009-12-17    2
+2010-04-22    2
+2009-03-12    2
+2011-10-15    2
+2010-02-10    2
+2009-09-24    2
+2011-03-01    2
+2009-09-18    2
+2011-11-07    2
+2009-09-27    2
+2010-03-27    2
+2012-06-13    2
+2011-12-25    2
+2011-03-08    2
+2009-01-25    2
+2010-05-04    2
+2010-03-28    2
+2009-11-16    2
+2011-06-08    2
+2009-10-27    2
+2009-04-20    2
+2012-03-21    2
+2009-11-28    2
+2011-10-13    2
+2011-12-17    2
+2012-07-08    2
+2011-07-29    2
+2009-12-16    2
+2009-10-29    2
+2012-12-16    2
+2009-06-07    2
+2009-07-05    2
+2012-08-13    2
+2010-07-04    2
+2011-06-07    2
+2012-05-29    2
+2011-06-27    2
+2009-11-05    2
+2009-08-16    2
+2009-04-30    2
+2009-02-14    2
+2009-02-19    2
+2012-02-12    2
+2010-03-20    2
+2010-12-15    2
+2012-11-15    2
+2010-09-05    2
+2009-01-03    2
+2011-03-09    1
+2010-12-23    1
+2010-02-18    1
+2011-08-19    1
+2009-03-03    1
+2012-10-23    1
+2011-01-27    1
+2010-05-09    1
+2009-02-18    1
+2009-05-29    1
+2011-03-23    1
+2011-06-04    1
+2010-10-15    1
+2011-07-11    1
+2011-10-17    1
+2009-08-20    1
+2011-05-30    1
+2012-08-17    1
+2009-05-30    1
+2009-03-31    1
+2010-09-01    1
+2010-11-13    1
+2009-11-14    1
+2011-02-17    1
+2009-12-09    1
+2012-10-10    1
+2012-04-11    1
+2010-02-16    1
+2009-02-21    1
+2012-11-11    1
+2012-09-08    1
+2009-06-20    1
+2011-04-14    1
+2011-01-11    1
+2010-08-06    1
+2009-06-24    1
+2010-09-06    1
+2012-07-07    1
+2011-03-28    1
+2011-05-13    1
+2009-12-25    1
+2010-03-29    1
+2012-11-29    1
+2012-01-21    1
+2009-06-26    1
+2011-08-31    1
+2010-06-26    1
+2012-10-01    1
+2011-12-01    1
+2009-08-09    1
+2012-04-21    1
+2009-01-23    1
+2012-06-25    1
+2012-10-26    1
+2012-11-04    1
+2009-03-07    1
+2012-01-01    1
+2012-03-22    1
+2011-05-26    1
+2010-06-17    1
+2011-08-01    1
+2010-05-06    1
+2012-03-31    1
+2010-12-14    1
+2009-12-24    1
+2012-09-16    1
+2012-05-30    1
+2011-02-03    1
+2009-07-03    1
+2011-01-07    1
+2012-11-07    1
+2011-03-12    1
+2012-05-19    1
+2012-08-18    1
+2011-09-29    1
+2011-11-23    1
+2012-08-16    1
+2010-11-27    1
+2010-10-22    1
+2011-02-19    1
+2010-02-21    1
+2009-04-26    1
+2012-11-05    1
+2012-07-05    1
+2009-03-05    1
+2010-12-07    1
+2011-04-12    1
+2010-06-24    1
+2009-04-11    1
+2011-04-19    1
+2010-01-21    1
+2009-11-19    1
+2012-12-18    1
+2009-01-09    1
+2011-04-26    1
+2012-03-14    1
+2011-06-29    1
+2009-03-16    1
+2009-08-17    1
+2010-12-08    1
+2012-05-18    1
+2009-05-24    1
+2010-06-05    1
+2009-11-15    1
+2011-04-10    1
+2009-11-06    1
+2012-09-11    1
+2009-08-11    1
+2010-04-06    1
+2011-02-16    1
+2010-07-30    1
+2010-02-03    1
+2010-04-09    1
+2009-07-30    1
+2012-03-08    1
+2012-03-29    1
+2010-11-18    1
+2009-10-23    1
+2012-01-28    1
+2009-09-14    1
+2009-05-05    1
+2011-04-17    1
+2011-12-07    1
+2010-02-09    1
+2012-11-13    1
+2009-06-18    1
+2011-07-17    1
+2010-03-17    1
+2011-05-25    1
+2009-04-02    1
+2011-02-20    1
+2009-12-13    1
+2011-10-23    1
+2010-11-20    1
+2009-12-22    1
+2010-12-02    1
+2012-09-02    1
+2012-07-22    1
+2012-12-06    1
+2011-06-05    1
+2009-03-15    1
+2010-02-23    1
+2010-09-15    1
+2009-06-02    1
+2011-01-20    1
+2011-01-16    1
+2009-07-29    1
+2011-06-14    1
+2010-01-17    1
+2009-06-06    1
+2010-02-13    1
+2010-03-16    1
+2011-08-12    1
+2009-04-14    1
+2009-02-24    1
+2010-06-10    1
+2012-06-16    1
+2009-07-08    1
+2010-05-12    1
+2012-03-16    1
+2011-06-25    1
+2010-07-05    1
+2009-01-01    1
+2011-05-09    1
+2009-12-20    1
+2010-05-18    1
+2011-03-02    1
+2010-07-13    1
+2011-05-23    1
+2010-12-09    1
+2009-09-21    1
+2009-12-27    1
+2011-11-06    1
+2010-10-10    1
+2012-10-21    1
+2012-05-27    1
+2012-08-20    1
+2010-03-25    1
+2011-02-25    1
+2009-10-05    1
+2012-01-10    1
+2009-11-23    1
+2012-08-23    1
+2009-12-03    1
+2012-03-17    1
+2009-12-30    1
+2012-07-26    1
+2009-05-13    1
+2011-09-09    1
+2010-04-24    1
+2011-01-24    1
+2010-08-19    1
+2009-10-17    1
+2011-08-16    1
+2009-08-25    1
+2011-07-28    1
+2009-06-05    1
+2010-06-29    1
+2010-03-06    1
+2011-09-05    1
+2010-09-02    1
+2010-08-01    1
+2012-08-06    1
+2011-12-03    1
+2009-12-04    1
+2010-06-13    1
+2009-09-10    1
+2009-09-02    1
+2011-11-08    1
+2011-05-11    1
+2012-08-15    1
+2009-02-20    1
+2010-10-14    1
+2009-03-19    1
+2010-05-31    1
+2010-11-26    1
+2010-10-27    1
+2012-06-07    1
+2012-02-10    1
+2012-05-14    1
+2010-12-10    1
+2012-08-11    1
+2010-09-07    1
+2011-06-11    1
+2009-05-14    1
+2010-04-30    1
+2010-02-24    1
+2011-04-24    1
+2012-11-06    1
+2010-08-28    1
+2012-02-29    1
+2012-08-26    1
+2009-12-11    1
+2009-12-29    1
+2011-08-08    1
+2009-01-27    1
+2010-06-02    1
+2011-03-11    1
+2009-11-18    1
+2012-12-24    1
+2011-12-15    1
+2011-01-02    1
+2011-03-26    1
+2012-03-19    1
+2009-11-07    1
+2009-10-31    1
+2011-02-28    1
+2012-01-26    1
+2010-01-06    1
+2009-11-01    1
+2012-12-17    1
+2009-10-30    1
+2010-05-01    1
+2012-02-08    1
+2011-01-15    1
+2009-11-12    1
+2012-10-05    1
+2009-02-28    1
+2009-12-07    1
+2012-12-20    1
+2010-04-04    1
+2010-08-12    1
+2009-06-16    1
+2011-12-28    1
+2011-03-22    1
+2012-02-13    1
+2009-07-01    1
+2011-05-05    1
+2012-07-13    1
+2012-09-24    1
+2011-03-27    1
+2011-08-30    1
+2011-12-12    1
+2009-08-03    1
+2009-12-15    1
+2012-12-23    1
+2012-08-08    1
+2012-02-16    1
+2011-11-28    1
+2011-12-26    1
+2010-08-16    1
+2012-01-18    1
+2009-03-04    1
+2011-01-08    1
+2009-08-13    1
+2009-05-18    1
+2011-05-18    1
+2012-10-11    1
+2012-06-14    1
+2010-09-22    1
+2011-01-13    1
+2010-11-03    1
+2011-05-10    1
+2010-06-01    1
+2009-05-10    1
+2009-05-09    1
+2009-12-18    1
+2010-08-02    1
+2009-03-09    1
+2012-07-24    1
+2009-11-26    1
+2010-03-10    1
+2012-11-26    1
+2012-04-08    1
+2010-03-11    1
+2011-07-26    1
+2009-02-07    1
+2010-01-19    1
+2009-12-21    1
+2012-05-01    1
+2012-05-25    1
+2009-01-29    1
+2009-04-24    1
+2009-07-10    1
+2010-03-26    1
+2010-12-25    1
+2011-06-22    1
+2011-09-12    1
+2012-06-18    1
+2009-11-24    1
+2012-04-18    1
+2012-01-02    1
+2010-03-18    1
+2009-05-16    1
+2011-11-14    1
+2011-02-21    1
+2011-10-14    1
+2012-05-24    1
+2010-03-04    1
+2009-01-14    1
+2010-11-11    1
+2011-01-22    1
+2009-09-07    1
+2011-10-11    1
+2009-11-11    1
+2012-02-24    1
+2010-12-18    1
+2010-08-31    1
+2009-08-29    1
+2009-08-24    1
+2011-01-30    1
+2009-02-17    1
+2009-05-27    1
+2012-12-07    1
+2010-03-31    1
+2009-07-12    1
+2010-04-08    1
+2012-12-19    1
+2010-04-27    1
+2011-02-11    1
+2010-01-01    1
+2009-09-22    1
+2012-08-27    1
+2012-04-20    1
+2009-03-26    1
+2012-01-11    1
+2012-12-15    1
+2012-12-26    1
+2012-06-01    1
+2012-10-22    1
+2009-08-12    1
+2010-08-08    1
+2009-10-24    1
+2011-07-14    1
+2009-02-03    1
+2012-12-05    1
+2010-02-05    1
+2011-09-01    1
+2011-09-23    1
+2011-11-29    1
+2011-08-18    1
+2010-02-15    1
+2009-06-08    1
+2010-10-11    1
+2010-08-18    1
+2011-05-15    1
+2012-12-08    1
+2009-02-08    1
+2009-07-13    1
+2009-08-19    1
+2009-05-03    1
+2011-06-02    1
+2010-05-27    1
+2009-04-04    1
+2011-02-09    1
+2012-11-30    1
+2010-04-02    1
+2012-05-28    1
+2009-07-31    1
+2011-11-27    1
+2011-01-26    1
+2011-10-08    1
+2012-10-14    1
+2011-09-26    1
+2010-04-26    1
+2011-03-05    1
+2012-11-02    1
+2009-07-20    1
+2010-05-23    1
+2010-08-07    1
+2011-12-27    1
+2009-04-17    1
+2011-02-22    1
+2011-04-07    1
+2009-11-13    1
+2012-09-07    1
+2010-05-15    1
+2011-07-10    1
+2011-07-30    1
+
+product_category
+product_category
+Office Supplies    1542
+Technology          635
+Furniture           573
+
+product_sub_category
+product_sub_category
+Paper                           378
+Binders & Binder Accessories    364
+Computer Peripherals            299
+Office Furnishings              254
+Telephones & Communication      204
+Appliances                      193
+Pens & Art Supplies             178
+Chairs & Chairmats              154
+Storage & Organization          142
+Labels                          115
+Office Machines                 109
+Tables                           97
+Envelopes                        84
+Bookcases                        68
+Rubber Bands                     58
+Scissors, Rulers & Trimmers      30
+Copiers & Fax                    23
+
