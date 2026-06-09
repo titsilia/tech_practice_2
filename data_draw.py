@@ -7,7 +7,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from datetime import datetime
 from PIL import Image, ImageDraw
 import numpy as np
-import dataset
+import datatest
 
 # Студ. ID: 70227481
 # Рекурсивная сумма цифр: 4
@@ -18,8 +18,8 @@ DEFAULT_BRUSH_SIZE = 7
 DEFAULT_COLOR = '#164A51'
 DEFAULT_CMAP = 'YlOrRd'
 
-NUMERIC_COLS = dataset.NUMERIC_COLS
-CATEGORICAL_COLS = dataset.CATEGORICAL_COLS
+NUMERIC_COLS = datatest.NUMERIC_COLS
+CATEGORICAL_COLS = datatest.CATEGORICAL_COLS
 ALL_COLS = NUMERIC_COLS + CATEGORICAL_COLS
 MARKER = 'P'
 
@@ -227,7 +227,7 @@ class DrawApp:
 
     def _update_plot(self):
         self.ax.clear()
-        df = dataset.df
+        df = datatest.df
         x = self.x_col
         y = self.y_col
         x_num = x in NUMERIC_COLS

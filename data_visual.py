@@ -5,15 +5,15 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from datetime import datetime
-import dataset
+import datatest
 
 # Студ. ID: 70227481, фамилия на М
 # Цветовая схема по умолчанию: 'YlOrRd'
 DEFAULT_CMAP = 'YlOrRd'
 MARKER = 'P'
 
-NUMERIC_COLS = dataset.NUMERIC_COLS
-CATEGORICAL_COLS = dataset.CATEGORICAL_COLS
+NUMERIC_COLS = datatest.NUMERIC_COLS
+CATEGORICAL_COLS = datatest.CATEGORICAL_COLS
 ALL_COLS = NUMERIC_COLS + CATEGORICAL_COLS
 
 CMAPS = [
@@ -54,7 +54,7 @@ class VisualApp:
 
         # Кнопки слева (ось Y)
         left_frame = tk.Frame(self.root)
-        left_frame.grid(row=1, column=0, padx=5, pady=5, sticky='n')
+        left_frame.grid(row=1, column=0, padx=5, pady=5, sticky='ns')
         tk.Label(left_frame, text="Ось Y", font=('Arial', 10, 'bold')).pack()
         for col in ALL_COLS:
             btn = tk.Button(left_frame, text=col, width=22,
@@ -98,7 +98,7 @@ class VisualApp:
 
     def _update_plot(self):
         self.ax.clear()
-        df = dataset.df
+        df = datatest.df
         x = self.x_col
         y = self.y_col
         x_num = x in NUMERIC_COLS
