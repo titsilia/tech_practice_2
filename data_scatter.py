@@ -1,18 +1,17 @@
 import tkinter as tk
-from tkinter import ttk
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from datetime import datetime
-import datatest
+import dataset
 
 # Студ. ID: 70227481
 # Рекурсивная сумма: 7+0+2+2+7+4+8+1=31 -> 3+1=4
-# Маркер №4: 'P' (плюс с заливкой)
-MARKER = 'P'
+# Маркер №4: 's' (квадрат)
+MARKER = 's'
 
-NUMERIC_COLS = datatest.NUMERIC_COLS
+NUMERIC_COLS = dataset.NUMERIC_COLS
 
 
 class ScatterApp:
@@ -62,7 +61,7 @@ class ScatterApp:
 
     def _update_plot(self):
         self.ax.clear()
-        df = datatest.df
+        df = dataset.df
         self.ax.scatter(df[self.x_col], df[self.y_col], marker=MARKER, alpha=0.6, color='steelblue')
         self.fig.tight_layout()
         self.canvas.draw()

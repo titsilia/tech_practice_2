@@ -1,5 +1,4 @@
 import pandas as pd
-import sys
 import io
 
 # Колонки датасета

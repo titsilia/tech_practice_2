@@ -7,7 +7,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from datetime import datetime
 from PIL import Image, ImageDraw
 import numpy as np
-import datatest
+import dataset
 
 # Студ. ID: 70227481
 # Рекурсивная сумма цифр: 4
@@ -18,10 +18,10 @@ DEFAULT_BRUSH_SIZE = 7
 DEFAULT_COLOR = '#164A51'
 DEFAULT_CMAP = 'YlOrRd'
 
-NUMERIC_COLS = datatest.NUMERIC_COLS
-CATEGORICAL_COLS = datatest.CATEGORICAL_COLS
+NUMERIC_COLS = dataset.NUMERIC_COLS
+CATEGORICAL_COLS = dataset.CATEGORICAL_COLS
 ALL_COLS = NUMERIC_COLS + CATEGORICAL_COLS
-MARKER = 'P'
+MARKER = 's'
 
 CMAPS = [
     'viridis', 'plasma', 'inferno', 'magma', 'cividis',
@@ -44,10 +44,15 @@ class DrawApp:
         self.brush_size = DEFAULT_BRUSH_SIZE
         self.brush_color = DEFAULT_COLOR
         self.drawing = False
-        self.last_stroke = []   # пиксели текущего мазка
-        self.undo_stroke = []   # последний завершённый мазок для отмены
-        self.overlay = None     # PIL Image для рисования
+        self.strokes = []          # список ВСЕХ завершённых мазков (каждый — список точек)
+        self.current_stroke = []   # точки текущего, ещё не завершённого мазка
+        self.overlay = None        # PIL Image для рисования
         self._build_ui()
+        # Форсируем расчёт реальных размеров виджетов ДО первого построения
+        # графика — иначе на момент первого _update_plot() окно ещё не
+        # отрисовано, winfo_width/height вернут 1x1, self.overlay не
+        # создастся, и рисовать будет нельзя до первой смены осей.
+        self.root.update_idletasks()
         self._update_plot()
 
     def _build_ui(self):
@@ -92,7 +97,15 @@ class DrawApp:
         widget.bind('<B1-Motion>', self._on_mouse_drag)
         widget.bind('<ButtonRelease-1>', self._on_mouse_release)
         widget.bind('<ButtonPress-3>', self._stop_draw_mode)
-        self.root.bind('<Control-z>', self._undo)
+        # Ловим Ctrl+Z по физическому коду клавиши (event.keycode), а не по
+        # символу (keysym) — символ зависит от раскладки (на ЙЦУКЕН клавиша
+        # в этом месте печатает "я", а не "z", и обычный '<Control-z>'
+        # с ней вообще не совпадает). keycode же определяется положением
+        # клавиши на клавиатуре и от раскладки не зависит: на Windows это
+        # VK_Z = 90 всегда, на Linux/X11 обычно 52, на macOS — 6.
+        # Проверяем оба варианта (keysym и keycode) для надёжности сразу
+        # на нескольких платформах.
+        self.root.bind_all('<Control-KeyPress>', self._on_ctrl_key)
 
         # Кнопки слева (ось Y)
         left_frame = tk.Frame(self.root)
@@ -157,13 +170,22 @@ class DrawApp:
 
     def _get_canvas_size(self):
         widget = self.canvas.get_tk_widget()
-        return widget.winfo_width(), widget.winfo_height()
+        w, h = widget.winfo_width(), widget.winfo_height()
+        # Пока окно не отрисовано на экране (сразу после запуска, до первого
+        # события Expose/Configure), winfo_width/height возвращают 1x1 —
+        # реальные размеры ещё не посчитаны geometry-менеджером. В этом
+        # случае используем "запрошенный" размер виджета (winfo_reqwidth/
+        # reqheight), который для canvas с фиксированным figsize известен
+        # сразу при создании и не зависит от того, замаплено ли окно.
+        if w <= 1 or h <= 1:
+            w, h = widget.winfo_reqwidth(), widget.winfo_reqheight()
+        return w, h
 
     def _on_mouse_press(self, event):
         if not self.draw_mode:
             return
         self.drawing = True
-        self.last_stroke = []
+        self.current_stroke = []
         self._paint(event.x, event.y)
 
     def _on_mouse_drag(self, event):
@@ -175,9 +197,10 @@ class DrawApp:
         if not self.draw_mode:
             return
         self.drawing = False
-        # Сохраняем текущий мазок для возможной отмены
-        self.undo_stroke = list(self.last_stroke)
-        self.last_stroke = []
+        # Завершённый мазок целиком уходит в историю (если что-то было нарисовано)
+        if self.current_stroke:
+            self.strokes.append(self.current_stroke)
+        self.current_stroke = []
 
     def _paint(self, x, y):
         if self.overlay is None:
@@ -186,20 +209,41 @@ class DrawApp:
         r = self.brush_size // 2
         # Рисуем квадрат
         draw.rectangle([x - r, y - r, x + r, y + r], fill=self.brush_color)
-        self.last_stroke.append((x, y))
+        # Запоминаем точку вместе с толщиной и цветом на момент рисования —
+        # это нужно, чтобы при отмене можно было точно восстановить все
+        # оставшиеся мазки, даже если цвет/толщина потом менялись
+        self.current_stroke.append((x, y, self.brush_size, self.brush_color))
         self._refresh_canvas()
 
+    def _on_ctrl_key(self, event):
+        """Диспетчер для Ctrl+<любая клавиша>. Вызывает отмену, если это
+        именно Z — распознаём и по keysym (сработает на латинской
+        раскладке), и по keycode (сработает независимо от раскладки,
+        в т.ч. на ЙЦУКЕН, где эта же физическая клавиша печатает "я")."""
+        keysym = (event.keysym or '').lower()
+        if keysym in ('z', 'cyrillic_ya') or event.keycode in (90, 52, 6, 29):
+            self._undo(event)
+
     def _undo(self, event=None):
-        if not self.draw_mode or self.drawing or not self.undo_stroke:
+        if not self.draw_mode or self.drawing or not self.strokes:
             return
-        # Восстанавливаем оверлей без последнего мазка
+        # Убираем последний завершённый мазок из истории...
+        self.strokes.pop()
+        # ...и перерисовываем оверлей с нуля по оставшимся мазкам,
+        # так что все более ранние линии остаются на месте
+        self._rebuild_overlay()
+        self._refresh_canvas()
+
+    def _rebuild_overlay(self):
+        """Полностью пересобирает оверлей по текущему списку self.strokes."""
         w, h = self._get_canvas_size()
         new_overlay = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+        draw = ImageDraw.Draw(new_overlay)
+        for stroke in self.strokes:
+            for (x, y, size, color) in stroke:
+                r = size // 2
+                draw.rectangle([x - r, y - r, x + r, y + r], fill=color)
         self.overlay = new_overlay
-        # Перерисовываем оверлей без последнего мазка
-        # (стираем все — это задание допускает отмену только одного последнего мазка)
-        self.undo_stroke = []
-        self._refresh_canvas()
 
     def _refresh_canvas(self):
         """Накладываем оверлей поверх графика matplotlib."""
@@ -227,7 +271,7 @@ class DrawApp:
 
     def _update_plot(self):
         self.ax.clear()
-        df = datatest.df
+        df = dataset.df
         x = self.x_col
         y = self.y_col
         x_num = x in NUMERIC_COLS
@@ -281,10 +325,13 @@ class DrawApp:
         self.fig.tight_layout()
         self.canvas.draw()
 
-        # Сбрасываем оверлей при обновлении графика
+        # Сбрасываем оверлей и историю мазков при обновлении графика —
+        # новый график не должен "помнить" рисунок со старого
         w, h = self._get_canvas_size()
         if w > 1 and h > 1:
             self.overlay = Image.new('RGBA', (w, h), (0, 0, 0, 0))
+        self.strokes = []
+        self.current_stroke = []
 
     def _save(self):
         """Сохраняем финальное изображение (график + рисунок)."""
