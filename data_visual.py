@@ -108,7 +108,6 @@ class VisualApp:
         y_num = y in NUMERIC_COLS
 
         import matplotlib.cm as cm
-        import numpy as np
 
         if x == y and x_num:
             # Гистограмма
