@@ -1,4 +1,5 @@
 import tkinter as tk
+from tkinter import ttk
 import matplotlib
 matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
@@ -28,6 +29,8 @@ class ScatterApp:
         self.fig, self.ax = plt.subplots(figsize=(6, 5))
         self.canvas = FigureCanvasTkAgg(self.fig, master=self.root)
         self.canvas.get_tk_widget().grid(row=0, column=1, padx=5, pady=5)
+
+        self.root.protocol("WM_DELETE_WINDOW", self._on_close)
 
         # Кнопки слева (ось Y) + кнопка сохранения внизу
         left_frame = tk.Frame(self.root)
@@ -71,6 +74,12 @@ class ScatterApp:
         filename = f"graph{now.strftime('%H_%M_%S')}.png"
         self.fig.savefig(filename)
         print(f"График сохранён: {filename}")
+
+    def _on_close(self):
+        """Закрывает фигуру matplotlib и полностью завершает процесс."""
+        plt.close(self.fig)
+        self.root.quit()
+        self.root.destroy()
 
 
 if __name__ == '__main__':

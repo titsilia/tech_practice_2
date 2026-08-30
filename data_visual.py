@@ -52,6 +52,11 @@ class VisualApp:
         self.canvas = FigureCanvasTkAgg(self.fig, master=self.root)
         self.canvas.get_tk_widget().grid(row=1, column=1, padx=5, pady=5)
 
+        # Корректное завершение процесса при закрытии окна (см. пояснение
+        # в data_scatter.py) — иначе python-процесс "зависает" в фоне
+        # даже после того, как окно визуально закрылось.
+        self.root.protocol("WM_DELETE_WINDOW", self._on_close)
+
         # Кнопки слева (ось Y)
         left_frame = tk.Frame(self.root)
         left_frame.grid(row=1, column=0, padx=5, pady=5, sticky='ns')
@@ -74,8 +79,6 @@ class VisualApp:
             btn = tk.Button(bottom_frame, text=col, width=16,
                             command=lambda c=col: self._set_x(c))
             btn.pack(side='left', padx=2)
-
-
 
     def _on_cmap_change(self, event=None):
         self.cmap = self.cmap_var.get()
@@ -164,6 +167,12 @@ class VisualApp:
         filename = f"graph{now.strftime('%H_%M_%S')}.png"
         self.fig.savefig(filename)
         print(f"График сохранён: {filename}")
+
+    def _on_close(self):
+        """Закрывает фигуру matplotlib и полностью завершает процесс."""
+        plt.close(self.fig)
+        self.root.quit()
+        self.root.destroy()
 
 
 if __name__ == '__main__':

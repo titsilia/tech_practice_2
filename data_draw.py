@@ -107,6 +107,12 @@ class DrawApp:
         # на нескольких платформах.
         self.root.bind_all('<Control-KeyPress>', self._on_ctrl_key)
 
+        # Корректное завершение процесса при закрытии окна: без этого
+        # обработчика после клика по крестику Tk-виджеты уничтожаются,
+        # но matplotlib продолжает хранить фигуру в своём глобальном
+        # реестре (pyplot.Gcf), из-за чего процесс python не завершается.
+        self.root.protocol("WM_DELETE_WINDOW", self._on_close)
+
         # Кнопки слева (ось Y)
         left_frame = tk.Frame(self.root)
         left_frame.grid(row=1, column=0, padx=5, pady=5, sticky='ns')
@@ -332,6 +338,12 @@ class DrawApp:
             self.overlay = Image.new('RGBA', (w, h), (0, 0, 0, 0))
         self.strokes = []
         self.current_stroke = []
+
+    def _on_close(self):
+        """Закрывает фигуру matplotlib и полностью завершает процесс."""
+        plt.close(self.fig)
+        self.root.quit()
+        self.root.destroy()
 
     def _save(self):
         """Сохраняем финальное изображение (график + рисунок)."""
