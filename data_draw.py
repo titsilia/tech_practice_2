@@ -6,7 +6,6 @@ import matplotlib.pyplot as plt
 from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from datetime import datetime
 from PIL import Image, ImageDraw
-import numpy as np
 import dataset
 
 # Студ. ID: 70227481
